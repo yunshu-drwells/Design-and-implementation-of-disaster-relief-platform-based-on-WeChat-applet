@@ -1,0 +1,10 @@
+/* pages/manageRightDisasterInfo/manageRightDisasterInfo.wxss */
+/* 资讯小窗 */
+.result-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 80rpx 10rpx;
+  overflow: hidden;
+  border-bottom: 4rpx solid #40E0D0; 
+  border-top: 2rpx solid #40E0D0; 
+}

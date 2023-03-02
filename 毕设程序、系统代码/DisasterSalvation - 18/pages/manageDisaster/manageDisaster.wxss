@@ -1,0 +1,28 @@
+/* pages/manageDisaster/manageDisaster.wxss */
+
+.result-item0 {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 80rpx 10rpx;
+  overflow: hidden;
+  border-bottom: 8rpx solid #e04083; 
+  border-top: 8rpx solid #e04083; 
+}
+
+.result-item1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 80rpx 10rpx;
+  overflow: hidden;
+  border-bottom: 8rpx solid #40E0D0; 
+  border-top: 8rpx solid #40E0D0; 
+}
+.title {
+  height: 110rpx;
+}
+.loading {
+  position: relative;
+  bottom: 5rpx;
+  padding: 10rpx;
+  text-align: center;
+}

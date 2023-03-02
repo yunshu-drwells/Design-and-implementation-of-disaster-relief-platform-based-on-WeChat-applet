@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/myself/myself",
+    "pages/disaster/disaster",
+    "pages/rightDisasterInfo/rightDisasterInfo",
+    "pages/admin/admin",
+    "pages/adminMenu/adminMenu",
+    "pages/rightDisasterInfoManage/rightDisasterInfoManage",
+    "pages/manageRightDisasterInfo/manageRightDisasterInfo",
+    "pages/addRightDisasterInfo/addRightDisasterInfo",
+    "pages/creatSalvationScheme/creatSalvationScheme",
+    "pages/rightDisasterInfoOnSalvation/rightDisasterInfoOnSalvation",
+    "pages/disasterExecutionInfo/disasterExecutionInfo",
+    "pages/adminchangePwd/adminchangePwd",
+    "pages/adminWithDrawCode/adminWithDrawCode",
+    "pages/superManageAdmin/superManageAdmin",
+    "pages/addadmin/addadmin",
+    "pages/adminInfo/adminInfo",
+    "pages/superAdminMenu/superAdminMenu",
+    "pages/superAdminchangePwd/superAdminchangePwd",
+    "pages/manageDisaster/manageDisaster",
+    "pages/visitorDisasterInfo/visitorDisasterInfo",
+    "pages/userDisasterInfo/userDisasterInfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+      "custom": true,
+      "color": "#7A7E83",
+      "selectedColor": "#3cc51f",
+      "borderStyle": "black",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "images/icon_component.png",
+          "selectedIconPath": "images/icon_component_HL.png",
+          "text": "资讯"
+        },
+        {
+          "pagePath": "pages/home/home",
+          "iconPath": "images/icon_API.png",
+          "selectedIconPath": "images/icon_API_HL.png",
+          "text": "上报"
+        }
+        ,
+        {
+          "pagePath": "pages/myself/myself",
+          "iconPath": "images/icon_Myself.png",
+          "selectedIconPath": "images/icon_Myself_HL.png",
+          "text": "我的"
+        }
+      ]
+    },
+    "plugins": {
+      "chooseLocation": {
+      "version": "1.0.9",
+      "provider": "wx76a9a06e5b4e693e"
+      }
+    },
+    "permission": {
+      "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+      }
+    },
+    "cloud":true
+}

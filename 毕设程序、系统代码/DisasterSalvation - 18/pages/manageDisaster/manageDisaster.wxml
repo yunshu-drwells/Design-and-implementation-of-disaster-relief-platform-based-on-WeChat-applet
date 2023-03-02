@@ -1,0 +1,37 @@
+<!--pages/manageDisaster/manageDisaster.wxml-->
+<!-- <text>pages/manageDisaster/manageDisaster.wxml</text> -->
+<text style="font-size: 20px;">待处理的上报的灾情信息共{{userDisasterListLength+visitorDisasterListLength}}条</text>
+<!-- 实现微信授权登录用户上传的灾情信息 -->
+<view  wx:if="{{showuserDisasterList}}">
+<text>微信授权用户上报的灾情信息：{{userDisasterListLength}}条</text>
+  <scroll-view scroll-y="true" wx:for="{{userDisasterList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item0" bindtap="showUserDisaster" data-item_id="{{item._id}}">
+      <text>灾情类型：{{item.type}}</text>
+      <text>上报时间：{{item.date}}</text>
+      <text >经度：{{item.longitude}}</text>
+      <text >纬度：{{item.latitude}}</text>
+      <view >地址：{{item.address}}</view>
+      <view >名称：{{item.locationName}}</view>
+      <text >描述：{{item.description}}</text>
+    </view>
+    <!-- <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view> -->
+  </scroll-view> 
+</view>
+<!-- 游客登录用户上报的灾情信息 -->
+<view  wx:if="{{showvisitorDisasterList}}">
+<text>游客上报的灾情信息：{{visitorDisasterListLength}}条</text>
+  <scroll-view scroll-y="true" wx:for="{{visitorDisasterList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item1" bindtap="showVisitorDisaster" data-item_id="{{item._id}}">
+      <text>灾情类型：{{item.type}}</text>
+      <text>上报时间：{{item.date}}</text>
+      <text >经度：{{item.longitude}}</text>
+      <text >纬度：{{item.latitude}}</text>
+      <view >地址：{{item.address}}</view>
+      <view >名称：{{item.locationName}}</view>
+      <text >描述：{{item.description}}</text>
+    </view>
+    <!-- <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view> -->
+  </scroll-view> 
+</view>

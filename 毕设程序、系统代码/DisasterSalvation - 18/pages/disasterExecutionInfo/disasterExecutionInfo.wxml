@@ -1,0 +1,67 @@
+<!--pages/disasterExecutionInfo/disasterExecutionInfo.wxml-->
+<!-- <text>pages/disasterExecutionInfo/disasterExecutionInfo.wxml</text> -->
+
+<view>_____________________________________________</view>
+<view>
+<text>类型：{{type}}</text>
+</view>
+
+
+<view>_____________________________________________</view>
+<view>
+<text>灾情等级：{{disasterGrade}}</text>
+</view>
+
+<view>_____________________________________________</view>
+<view>
+<text>物资总数：{{materialNumber}}</text>
+</view>
+<view>
+<text>救助人员总数：{{rescuersNumber}}</text>
+</view>
+
+<view>_____________________________________________</view>
+<view>
+<text>日期：{{date}}</text>
+</view>
+
+<view>_____________________________________________</view>
+<view>
+<text >定位：</text>
+<view >经度：{{longitude}}</view>
+<view >纬度：{{latitude}}</view>
+<view >地址：{{address}}</view>
+<view >名称：{{locationName}}</view>
+<view >省：{{province}}</view>
+<view >市：{{city}}</view>
+<view >区：{{district}}</view>
+</view>
+
+
+<view wx:if="{{showdescription}}">
+<view>_____________________________________________</view>
+<text >灾情描述： {{description}}</text>
+</view>
+
+
+<view wx:if="{{showvideoUrl}}">
+<view>_____________________________________________</view>
+<text>视频：</text>
+<video  src="{{videoUrl}}"></video>
+</view>
+
+
+<view  wx:if="{{showimgUrl0}}">
+<view>_____________________________________________</view>
+<text>图片：</text>
+<image src="{{imgUrl0}}"></image>
+<image wx:if="{{showimgUrl1}}" src="{{imgUrl1}}"></image>
+<image wx:if="{{showimgUrl2}}" src="{{imgUrl2}}"></image>
+<image wx:if="{{showimgUrl3}}" src="{{imgUrl3}}"></image>
+<image wx:if="{{showimgUrl4}}" src="{{imgUrl4}}"></image>
+<image wx:if="{{showimgUrl5}}" src="{{imgUrl5}}"></image>
+<image wx:if="{{showimgUrl6}}" src="{{imgUrl6}}"></image>
+<image wx:if="{{showimgUrl7}}" src="{{imgUrl7}}"></image>
+<image wx:if="{{showimgUrl8}}" src="{{imgUrl8}}"></image>
+</view>
+

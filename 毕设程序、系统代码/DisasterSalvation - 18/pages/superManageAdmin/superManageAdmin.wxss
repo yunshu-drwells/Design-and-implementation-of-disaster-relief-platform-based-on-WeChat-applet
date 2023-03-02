@@ -1,0 +1,7 @@
+/* pages/superManageAdmin/superManageAdmin.wxss */
+.head{
+  border: #40E0D0 3px solid;
+}
+.result-item {
+  border: #40E0D0 3px solid;
+}

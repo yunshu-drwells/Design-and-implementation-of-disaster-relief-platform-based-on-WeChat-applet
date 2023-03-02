@@ -1,0 +1,142 @@
+.phone-text{
+  border-radius: 80rpx;
+}
+.visitor-text{
+  border-radius: 80rpx;
+  color: white;
+  background-color: #456456;
+}
+/* ---弹窗css--- */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  color: #fff;
+}
+.modal-dialog {
+  width: 72%;
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  background: #fff;
+  border-radius: 12rpx;
+}
+.modal-content{
+  height: 370rpx;
+  text-align: center;
+}
+.modal-content .show{
+  width: 130rpx;
+  height: 130rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 18rpx;
+  z-index: 10000;
+}
+.iconWx{
+  width:52rpx;
+  height: 41rpx;
+  padding-right: 20rpx;
+}
+.iconx{
+  width:56rpx;
+  height: 56rpx;
+  padding-right: 15rpx;
+}
+.modal-content view:nth-of-type(2){
+  font-size: 38rpx;
+  color: #333333;
+  line-height: 1;
+}
+.modal-content view:nth-of-type(3){
+  font-size: 26rpx;
+  color: #9c9c9c;
+  margin: 18rpx 0 29rpx;
+  line-height: 1;
+}
+.modal-content button:nth-of-type(1){
+  width: 80%;
+  height: 80rpx;
+  border-radius: 60rpx;
+  margin: 0 auto 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #31cc32;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal-content button:nth-of-type(1)::after{
+  border: none;
+}
+.modal-content  .wxLogin{
+  font-size: 26rpx;
+  color: #424242;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 38rpx 0 80rpx;
+}
+button::after{
+  border: none;
+}
+.phone-text{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  margin-right: 10rpx;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ---登录界面css--- */
+.userinfo {
+  height: 560rpx;
+  width: 650rpx;
+  display: outside;
+  flex-direction: column;
+  align-items: top;
+  justify-content: top;
+  margin-left: 20px;
+  /* 居中 */
+}
+.header {
+  margin: 100rpx 0 70rpx 10rpx;
+  /* margin: 90rpx 0 90rpx 50rpx; */
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 220rpx;
+  line-height: 50rpx;
+ }
+  
+ .header image {
+  width: 200rpx;
+  height: 200rpx;
+ }
+ 
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+ }
+  
+ .content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+ }
+
+ /* 管理员按钮 */
+ .adminBtn{
+  border-radius: 80rpx;
+  color: white;
+  background-color: red;
+ }

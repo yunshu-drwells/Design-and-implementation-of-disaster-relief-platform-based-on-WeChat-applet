@@ -1,0 +1,68 @@
+<!--pages/userDisasterInfo/userDisasterInfo.wxml-->
+<!-- <text>pages/userDisasterInfo/userDisasterInfo.wxml</text> -->
+<view style="font-size:xx-small;">
+<view>特大型地质灾害险情和灾情（Ⅰ级）</view>
+<view>大型地质灾害险情和灾情（Ⅱ级）</view>
+<view>中型地质灾害险情和灾情（Ⅲ级）</view>
+<view>小型地质灾害险情和灾情（Ⅳ级）</view>
+</view>
+
+<!-- <input  auto-focus placeholder=" " bindinput="getDisasterGrade" name="disasterType"></input> -->
+<view class="section section_gap">
+    <text class="section__title">请对灾情划分等级(1~4)</text>
+    <view class="body-view">
+        <slider bindchange="sliderDisasterGradeChange" max="4" min="1" show-value/>
+    </view>
+</view>
+
+<button bindtap="deleteUserInfo" style="background-color: #e04083;">删除</button>
+<button bindtap="commitUserInfo" style="background-color: #40E0D0;">核实通过</button>
+
+<view>
+<text>上报用户的_openid：{{openid}}</text>
+</view>
+
+<view>
+<text>类型：{{type}}</text>
+</view>
+
+<view>
+<text>日期：{{date}}</text>
+</view>
+
+<view>
+<text >定位：</text>
+<text >经度：{{longitude}}</text>
+<text >纬度：{{latitude}}</text>
+<view >地址：{{address}}</view>
+<view >名称：{{locationName}}</view>
+<view >省：{{province}}</view>
+<view >市：{{city}}</view>
+<view >区：{{district}}</view>
+</view>
+
+
+<view>
+<text wx:if="{{showdescription}}">灾情描述： {{description}}</text>
+</view>
+
+
+<view wx:if="{{showvideoUrl}}">
+<text>视频：</text>
+<video  src="{{videoUrl}}"></video>
+</view>
+
+
+<view  wx:if="{{showimgUrl0}}">
+<text>图片：</text>
+<image src="{{imgUrl0}}"></image>
+<image wx:if="{{showimgUrl1}}" src="{{imgUrl1}}"></image>
+<image wx:if="{{showimgUrl2}}" src="{{imgUrl2}}"></image>
+<image wx:if="{{showimgUrl3}}" src="{{imgUrl3}}"></image>
+<image wx:if="{{showimgUrl4}}" src="{{imgUrl4}}"></image>
+<image wx:if="{{showimgUrl5}}" src="{{imgUrl5}}"></image>
+<image wx:if="{{showimgUrl6}}" src="{{imgUrl6}}"></image>
+<image wx:if="{{showimgUrl7}}" src="{{imgUrl7}}"></image>
+<image wx:if="{{showimgUrl8}}" src="{{imgUrl8}}"></image>
+</view>
+

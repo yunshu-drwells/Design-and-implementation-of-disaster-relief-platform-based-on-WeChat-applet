@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<!-- <text style="position: relative; left: 300rpx; top: -1rpx">灾情资讯</text> -->
+<view class='searchbox' bindtap='search'>
+      <view class='searchbox_in'>
+         <icon class='search_img' type='search' size='13'></icon>
+         <text class='search_txt'>搜索</text>
+      </view>
+   </view>
+<view class="section">
+<!-- <button type="primary" style="position: relative; left: 0rpx; top: -1rpx">定位</button> -->
+  <!-- <view class="section__title" style="position: relative; left: 260rpx; top: -1rpx">省市区选择器</view> -->
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      选择地理位置：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</view>
+
+<!-- <button bindtap="showMap">选择当前定位</button> -->
+
+
+<!-- 实现微信授权登录用户上传的灾情信息 -->
+<view  wx:if="{{showRightDisasterList}}">
+<text>经核实的灾情讯息：</text>
+  <scroll-view scroll-y="true" wx:for="{{RightDisasterList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item" bindtap="showRightDisaster" data-item_id="{{item._id}}">
+      <text>灾情类型：{{item.type}}</text>
+      <text>上报时间：{{item.date}}</text>
+      <view >地址：{{item.address}}</view>
+      <view >名称：{{item.locationName}}</view>
+      <text >描述：{{item.description}}</text>
+    </view>
+    <!-- <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view> -->
+  </scroll-view> 
+</view>

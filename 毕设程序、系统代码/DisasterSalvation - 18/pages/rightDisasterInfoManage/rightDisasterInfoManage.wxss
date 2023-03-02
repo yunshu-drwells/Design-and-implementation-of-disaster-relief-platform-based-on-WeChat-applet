@@ -1,0 +1,4 @@
+/* pages/rightDisasterInfoManage/rightDisasterInfoManage.wxss */
+.input{
+  border: #40E0D0 3px solid;
+}

@@ -1,0 +1,3 @@
+<!--pages/mapLocation/city.wxml-->
+<text>pages/mapLocation/city.wxml</text>
+<button bindtap="loc">btn</button>>

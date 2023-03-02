@@ -1,0 +1,86 @@
+<!--pages/rightDisasterInfoManage/rightDisasterInfoManage.wxml-->
+<!-- <text>pages/rightDisasterInfoManage/rightDisasterInfoManage.wxml</text> -->
+
+<button bindtap="deleteRightDisastor" type="warn">删除</button>
+<button bindtap="updateRightDisastor" type="primary">修改</button>
+
+<!-- <view>
+<text>类型：{{type}}</text>
+</view> -->
+<!-- <view>
+<text>日期：{{date}}</text>
+</view> -->
+<!-- <view>
+<text>等级：{{disasterGrade}}</text>
+</view>
+
+<view>
+<text >定位：</text>
+<text >经度：{{longitude}}</text>
+<text >纬度：{{latitude}}</text>
+<view >地址：{{address}}</view>
+<view >名称：{{locationName}}</view>
+</view>
+
+<view>
+<text wx:if="{{showdescription}}">灾情描述： {{description}}</text>
+</view> -->
+
+
+
+<view>_____________________________________________</view>
+<view >类型：</view> 
+<input auto-focus class="input" bindinput="getDisasterType" auto-focus placeholder="请输入类型" value="{{type}}"></input>
+
+<view class="section section_gap">
+    <text class="section__title">更改灾情划分等级(1~4)</text>
+    <view class="body-view">
+        <slider bindchange="sliderDisasterGradeChange" max="4" min="1" value="{{disasterGrade}}" show-value/>
+    </view>
+</view>
+
+<view>_____________________________________________</view>
+<view >日期：</view> <input class="get" bindtap="" auto-focus placeholder="日期" disabled="false" value="{{date}}"></input>
+
+<view>_____________________________________________</view>
+<view >定位：</view>
+<view >经度：</view> <input class="get" bindtap="" auto-focus placeholder="" disabled="false" value="{{longitude}}"></input>
+<view >纬度：</view> <input class="get" bindtap="" auto-focus placeholder="" disabled="false" value="{{latitude}}"></input>
+<view >地址：</view> <input class="get" bindtap="" auto-focus placeholder="" disabled="false" value="{{address}}"></input>
+<view >名称：</view> <input class="get" bindtap="" auto-focus placeholder="" disabled="false" value="{{locationName}}"></input>
+<view >省：{{province}}</view>
+<view >市：{{city}}</view>
+<view >区：{{district}}</view>
+
+
+
+<view>_____________________________________________</view>
+<view >灾情描述： </view> 
+<!-- <input class="input" bindtap="getDisasterDescription" auto-focus placeholder="请输入灾情描述" value="{{description}}"></input> -->
+<view class="textarea-wrp">
+  <textarea class="input" auto-focus="true" bindinput="getDisasterDescription" style="height: 162rpx; width: 750rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" value="{{description}}"/>
+</view>
+<view>_____________________________________________</view>
+
+    
+
+<view wx:if="{{showvideoUrl}}">
+<text>视频：</text>
+<video  src="{{videoUrl}}"></video>
+</view>
+
+
+<view  wx:if="{{showimgUrl0}}">
+<text>图片：</text>
+<image src="{{imgUrl0}}"></image>
+<image wx:if="{{showimgUrl1}}" src="{{imgUrl1}}"></image>
+<image wx:if="{{showimgUrl2}}" src="{{imgUrl2}}"></image>
+<image wx:if="{{showimgUrl3}}" src="{{imgUrl3}}"></image>
+<image wx:if="{{showimgUrl4}}" src="{{imgUrl4}}"></image>
+<image wx:if="{{showimgUrl5}}" src="{{imgUrl5}}"></image>
+<image wx:if="{{showimgUrl6}}" src="{{imgUrl6}}"></image>
+<image wx:if="{{showimgUrl7}}" src="{{imgUrl7}}"></image>
+<image wx:if="{{showimgUrl8}}" src="{{imgUrl8}}"></image>
+</view>
+
+

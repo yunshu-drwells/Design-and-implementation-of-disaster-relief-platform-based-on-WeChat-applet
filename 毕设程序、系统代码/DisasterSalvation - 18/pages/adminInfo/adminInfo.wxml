@@ -1,0 +1,22 @@
+<!--pages/adminInfo/adminInfo.wxml-->
+<!-- <text>pages/adminInfo/adminInfo.wxml</text> -->
+<button class="btn" bindtap="updateAdmin" style="position: relative; left: 0rpx; top: 24rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black; background-color: yellow;">修改</button>
+<button class="btn" bindtap="deleteAdmin" style="position: relative; left: 0rpx; top: 48rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: white; background-color: red;">删除</button>
+
+<text style="position: relative; top: 950rpx; margin-top:1000rpx">管理员详细信息如上（可以直接做更改）</text>
+<text style="position: relative; margin-left: -666rpx; top: 90rpx; width: 20rpx; left: 146rpx">编号:</text> <input class="input" style="margin-top: 90rpx; margin-left: 0rpx; width: 750rpx; height: 40rpx; display: block; box-sizing: border-box" disabled="false" auto-focus placeholder="编号" value="{{_id}}"></input>
+<text style="width:20rpx;">账号:</text> <input class="input" style="margin-top: 10rpx; width: 750rpx; height: 52rpx; display: block; box-sizing: border-box" auto-focus placeholder="账号" bindinput="getCode" value="{{newCode}}"></input>
+<text style="width:20rpx;">密码:</text> <input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="密码" bindinput="getPwd" value="{{newPwd}}"></input>
+<text style="width:20rpx;">证件号:</text> <input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="证件号" bindinput="getNewId" value="{{newId}}"></input>
+<text style="width:20rpx;">性别:</text>
+<view wx:if="{{item.gender==2}}">
+<text>性别--{{newGender}}</text>
+</view>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="性别" bindinput="getNewGender" wx:if="{{newGender==2}}" value="女性"></input>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="性别" bindinput="getNewGender" wx:if="{{newGender==1}}" value="男性"></input>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="性别" bindinput="getNewGender" wx:if="{{newGender==0 || gender!=2 && gender!=1}}" value="未知"></input>
+<text style="width:20rpx;">电话:</text> 
+<input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="电话" bindinput="getNewPhone" value="{{newPhone}}"></input>
+
+<text style="position: relative; top: 172rpx; left: 43rpx">说明：</text>
+<text style="position: relative; margin-left: -94rpx; top: 261rpx; font-size: xx-small; left: 19rpx">性别合法输入——女性：{女性、女、2、female}；男性：{男性、男、1、male}；未知{未知、0}</text>

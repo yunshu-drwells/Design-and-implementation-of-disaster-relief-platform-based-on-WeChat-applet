@@ -1,0 +1,5 @@
+<!--pages/superAdminMenu/superAdminMenu.wxml-->
+<!-- <text>pages/superAdminMenu/superAdminMenu.wxml</text> -->
+<button class="btn" bindtap="toManagePage" style="position: relative; left: 0rpx; top: 24rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black; background-color: yellow;">进入普通管理员模式</button>
+<button class="btn" bindtap="toSuperManagePage" type="primary" style="position: relative; left: 0rpx; top: 36rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">管理普通管理员信息</button>
+<button class="btn" bindtap="toSuperChangePwd" style="position: relative; left: 0rpx; top: 48rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: white; background-color: red;">超级管理员账号改密</button>

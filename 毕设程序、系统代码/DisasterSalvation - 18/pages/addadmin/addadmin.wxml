@@ -1,0 +1,25 @@
+<!--pages/addadmin/addadmin.wxml-->
+<!-- <text>pages/addadmin/addadmin.wxml</text> -->
+<!--pages/adminInfo/adminInfo.wxml-->
+<!-- <text>pages/adminInfo/adminInfo.wxml</text> -->
+
+
+
+<text style="width:20rpx; position: relative;">账号:</text> <input class="input" style="top:-10rpx; width: 750rpx; height: 52rpx; display: block; box-sizing: border-box" auto-focus placeholder="请输入账号" bindinput="getCode" value="{{Code}}"></input>
+<text style="width:20rpx;">密码:</text> <input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入密码" bindinput="getPwd" value="{{Pwd}}"></input>
+<text style="width:20rpx;">证件号:</text> <input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入证件号" bindinput="getNewId" value="{{ID}}"></input>
+<text style="width:20rpx;">性别:</text>
+<view wx:if="{{item.gender==2}}">
+<text>性别--{{gender}}</text>
+</view>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入性别" bindinput="getNewGender" wx:if="{{gender==2}}" value="女性"></input>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入性别" bindinput="getNewGender" wx:if="{{gender==1}}" value="男性"></input>
+<input  class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入性别" bindinput="getNewGender" wx:if="{{gender==0 || gender!=2 && gender!=1}}"></input>
+<text style="width:20rpx;">电话:</text> 
+<input class="input" style="margin-top:10rpx; width: 736rpx;" auto-focus placeholder="请输入电话" bindinput="getNewPhone" value="{{phone}}"></input>
+
+<text style="position: relative; top: 172rpx; left: 43rpx">说明：</text>
+<text style="position: relative; margin-left: -94rpx; top: 211rpx; font-size: xx-small; left: 19rpx">性别合法输入——女性：{女性、女、2、female}；男性：{男性、男、1、male}；未知{未知、0}</text>
+
+
+<button class="btn" bindtap="addAdmin" type="primary" style="position: relative; left: 0rpx; top: 237rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box">添加</button>

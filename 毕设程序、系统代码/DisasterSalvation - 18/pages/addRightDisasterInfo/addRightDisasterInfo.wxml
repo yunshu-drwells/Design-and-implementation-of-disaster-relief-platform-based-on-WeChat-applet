@@ -1,0 +1,75 @@
+<!--pages/addRightDisasterInfo/addRightDisasterInfo.wxml-->
+<!-- <text>pages/addRightDisasterInfo/addRightDisasterInfo.wxml</text> -->
+
+<button bindtap="toRightDisasterManagePage" type="primary">上传</button>
+
+<view>_____________________________________________</view>
+<!-- 选择灾情类型 -->
+<text>灾情类型选择：</text>
+<view class="page-section-disaster-type"style="width: 750rpx; height: 286rpx; display: block; box-sizing: border-box">
+   <scroll-view>
+    <view class='rg_view'>
+         <radio-group class='rg' bindchange='radiochange'><!-- 事件绑定 -->
+            <view class="class_r_g" wx:for="{{classes_array}}" wx:key="*this" style="width: 268rpx; height: 61rpx; display: block; box-sizing: border-box">
+               <radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}" data-id='item.index'></radio>           
+               <label class="label-2__text" for="{{item.name}}">
+                  <text class='{{item.checked?"checkedt":"normalt"}}'>{{item.name}}</text><!-- 根据每一项的checked属性来切换点击radio中的文本的点击效果 -->
+               </label>
+            </view>
+         </radio-group>
+      </view>
+   </scroll-view>
+   <form bindsubmit='searchBox'>
+    <input  auto-focus placeholder=" 其它灾情请手动输入" bindinput="getDisasterType" name="disasterType"></input>
+   </form>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">请滑动滑块对灾情划分等级(1~4)</text>
+    <view class="body-view">
+        <slider bindchange="sliderDisasterGradeChange" max="4" min="1" value="{{disasterGrade}}" show-value/>
+    </view>
+</view>
+
+<view>_____________________________________________</view>
+<text>定位信息：</text>
+<view class="getLocaton" style="width: 750rpx; height: 507rpx; display: block; box-sizing: border-box">
+  <view class="page-section-LongitudeLatitude" >
+    <button class="btn" bindtap="getLongitudeLatitude" style="position: relative; left: -3rpx; top: 0rpx; width: 338rpx; height: 68rpx; display: block; box-sizing: border-box">使用当前定位</button>
+    <!-- <text> 经度：{{longitude}}</text>
+    <text>纬度：{{latitude}}</text>
+    <view style="position: relative; left: 0rpx; top: 12rpx; width: 383rpx; height: 50rpx; display: block; box-sizing: border-box">地址：{{address?address:"暂无"}}</view>
+    <view style="position: relative; left: 408rpx; top: -38rpx; width: 293rpx; height: 50rpx; display: block; box-sizing: border-box">名称：{{locationName?locationName:"暂无"}}</view> -->
+  </view>
+  <view class="page-section-getLocation">
+    <view style="width: 336rpx; height: 52rpx; display: block; box-sizing: content-box">
+      <button class="btn" bindtap="showMap" style="position: relative; left: 200rpx; top: 22rpx">地图选点</button>
+    </view>
+    <view >
+      <text style="position: relative; left: 0rpx; top: 61rpx">经度：{{longitude}}</text>
+      <text style="position: relative; left: 0rpx; top: 61rpx">纬度：{{latitude}}</text>
+      <view style="position: relative; left: 0rpx; top: 86rpx; width: 383rpx; height: 50rpx; display: block; box-sizing: border-box">地址：{{address?address:"暂无"}}</view>
+      <view style="position: relative; left: 383rpx; top: 36rpx; width: 293rpx; height: 50rpx; display: block; box-sizing: border-box">名称：{{locationName?locationName:"暂无"}}</view>
+    </view>
+  </view>
+</view>
+
+
+<view>_____________________________________________</view>
+<view >灾情描述： </view> 
+<!-- <input class="input" bindtap="getDisasterDescription" auto-focus placeholder="请输入灾情描述" value="{{description}}"></input> -->
+<view class="textarea-wrp">
+  <textarea class="input" auto-focus="true" bindinput="getDisasterDescription" style="height: 162rpx; width: 750rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" value="{{description}}"/>
+</view>
+<view>_____________________________________________</view>
+
+
+
+<view class="page-upload" style="width: 736rpx; height: 300rpx; display: block; box-sizing: border-box">
+<!-- 长传图片 -->
+<text style="position:relative">长传图片：</text>
+<button class="btn" bindtap="chooseImg" style="position: relative; left: 0rpx; top: 10rpx">选择图片</button>
+<!-- 上传音视频 -->
+<text style="top: 24rpx; position: relative; left: 0rpx">上传视频：</text>
+<button class="btn" bindtap="chooseVideo" style="position: relative; left: 0rpx; top: 45rpx">上传视频</button>
+</view>

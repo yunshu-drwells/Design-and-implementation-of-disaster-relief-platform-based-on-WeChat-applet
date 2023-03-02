@@ -1,0 +1,5 @@
+<!--pages/adminchangePwd/adminchangePwd.wxml-->
+<!-- <text>pages/adminchangePwd/adminchangePwd.wxml</text> -->
+<text>欢迎管理员：{{adminCode}}</text>
+<input  auto-focus placeholder=" 请输入新的密码" bindinput="getNewPwd" name="密码" style="margin-top:5px;height:38px;border: #40E0D0 2px solid;"></input>
+<button class="btn" bindtap="changePwd" type="primary" style="position: relative; left: 0rpx; top: 12rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">确认修改</button>

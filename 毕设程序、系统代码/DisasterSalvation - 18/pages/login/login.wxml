@@ -1,0 +1,26 @@
+<!--pages/login/index.wxml-->
+<view class="userinfo">
+  <view class='header'>
+    <image src='/images/wx_login.png'></image>
+  </view>
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text>获得你的公开信息(昵称，头像等)</text>
+  </view> 
+  <button class='phone-text'  type='primary' open-type="getUserInfo"  lang="zh_CN" bindtap="getUserProfile">授权登录</button>
+  <button class='visitor-text' lang="zh_CN" bindtap="onGotVisitorInfo" style="position: relative; left: 0rpx; top: 29rpx">游客登录</button>
+  <button class='adminBtn' lang="zh_CN" bindtap="gotoAdminasterPage" style="position: relative; left: 0rpx; top: 59rpx">管理员登录</button>
+</view> 
+
+<!--登录弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view><image src='/images/show.png' class='show'></image></view>
+    <view>绑定手机号</view>
+    <view>请先绑定手机号在进行此操作</view>  
+    <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+      <image src='/images/WxShow.png' class='iconWx'></image>微信用户一键绑定
+    </button>
+  </view>
+</view>

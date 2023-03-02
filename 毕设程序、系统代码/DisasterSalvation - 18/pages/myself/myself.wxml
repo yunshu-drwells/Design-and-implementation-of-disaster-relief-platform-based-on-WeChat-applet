@@ -1,0 +1,18 @@
+<!--pages/myself/myself.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{headUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+  </view>
+  <!-- <view class="userinfo" wx:for="{{list}}" wx:key="*this" >
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{item.headUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{item.nickName}}</text>
+  </view> -->
+
+
+  <!-- 清理云数据库所登录用户的信息销毁所有页面 -->
+  <button bindtap="layout" style="position: relative; left: -5rpx; top: 86rpx;" type='primary'>退出登录</button>
+  <button wx:if="{{cloudID!='null'}}" bindtap="toDisasterPage" style="position: relative; left: -5rpx; top: 118rpx; background-color: #456456;">上报灾情详情</button>
+  <button wx:if="{{cloudID!='null'}}" bindtap="toDisasterPageBackout" style="position: relative; left: -5rpx; top: 146rpx; background-color: red">上报灾情撤销</button>
+</view>

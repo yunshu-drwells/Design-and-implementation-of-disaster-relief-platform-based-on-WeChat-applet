@@ -1,0 +1,24 @@
+<!--pages/manageRightDisasterInfo/manageRightDisasterInfo.wxml-->
+<!-- <text>pages/manageRightDisasterInfo/manageRightDisasterInfo.wxml</text> -->
+
+<button class="btn" bindtap="addRightDisasterInfo" type="primary" style="left: 0rpx; top: 24rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">添加灾情资讯</button>
+
+
+<view style="margin-top:40rpx">总共：{{RightDisasterListLength}}条资讯</view>
+<!-- 管理员管理灾情讯息预览界面 -->
+<view  wx:if="{{showRightDisasterList}}">
+  <scroll-view scroll-y="true" wx:for="{{RightDisasterList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item" bindtap="showRightDisasterManage" data-item_id="{{item._id}}">
+      <text>灾情类型：{{item.type}}</text>
+      <text>上报时间：{{item.date}}</text>
+      <view >地址：{{item.address}}</view>
+      <view >名称：{{item.locationName}}</view>
+      <view >省：{{item.province}}</view>
+      <view >市：{{item.city}}</view>
+      <view >区：{{item.district}}</view>
+      <text >描述：{{item.description}}</text>
+    </view>
+    <!-- <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view> -->
+  </scroll-view> 
+</view>

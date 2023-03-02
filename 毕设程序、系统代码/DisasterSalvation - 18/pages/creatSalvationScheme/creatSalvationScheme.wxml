@@ -1,0 +1,35 @@
+<!--pages/creatSalvationScheme/creatSalvationScheme.wxml-->
+<!-- <text>pages/creatSalvationScheme/creatSalvationScheme.wxml</text> -->
+<view>物资总数:</view>
+<input  auto-focus placeholder=" 请输入物资总数" bindinput="getMaterialNumber" name="disasterType"></input>
+<view>救助人员总数:</view>
+<input  auto-focus placeholder=" 请输入救助人员总数" bindinput="getRescuersNumber" name="disasterType"></input>
+<button class="btn" bindtap="creatSalvationScheme" type="primary" style="left: 0rpx; top: 24rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">按应急资源配置决策模型生成救援表</button>
+<button class="btn" bindtap="emptySalvationScheme" type="primary" style="left: 0rpx; top: 36rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">清空已生成的救援表</button>
+<view style="font-size: xx-small;">多次点击生成救援表按钮会覆盖之前的结果</view>
+
+<view>______________________________________________________</view>
+<view>{{status}}</view>
+<view style="margin-top:-6rpx; left:80rpx;">(总共：{{RightDisasterListLength}}条资讯)</view>
+<!-- 管理员管理灾情讯息预览界面 -->
+<view  wx:if="{{showRightDisasterList}}">
+  <scroll-view scroll-y="true" wx:for="{{RightDisasterList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item" bindtap="showdisasterExecutionTableDetails" data-item_id="{{item._id}}">
+      <text>灾情类型：{{item.type}}</text>
+      <view >等级：{{item.disasterGrade}}</view>
+      <text>上报时间：{{item.date}}</text>
+      <view >地址：{{item.address}}</view>
+      <view >名称：{{item.locationName}}</view>
+      
+      <view wx:if="{{showMaterialNumber}}">物资总数:{{item.materialNumber}}</view>
+      <view wx:if="{{showRescuersNumber}}">救助人员总数:{{item.rescuersNumber}}</view>
+
+      <view >省：{{item.province}}</view>
+      <view >市：{{item.city}}</view>
+      <view >区：{{item.district}}</view>
+      <text >描述：{{item.description}}</text>
+    </view>
+    <!-- <view class="loading" hidden="{{!loadMore}}">正在载入更多...</view>
+    <view class="loading" hidden="{{!loadAll}}">已加载全部</view> -->
+  </scroll-view> 
+</view>

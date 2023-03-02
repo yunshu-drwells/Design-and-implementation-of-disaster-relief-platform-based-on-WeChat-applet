@@ -1,0 +1,8 @@
+<!--pages/adminMenu/adminMenu.wxml-->
+<!-- <text>pages/adminMenu/adminMenu.wxml</text> -->
+
+<button class="btn" bindtap="gotomanageDisaster" type="primary" style="position: relative; left: 0rpx; top: 12rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">上报灾情信息管理</button>
+<button class="btn" bindtap="gotomanageRightDisaster" type="primary" style="position: relative; left: 0rpx; top: 24rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">灾情资讯管理</button>
+<button class="btn" bindtap="creatSalvationScheme" type="primary" style="position: relative; left: 0rpx; top: 36rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">生成及预览灾情救助方案</button>
+<button wx:if="{{!isSuper}}" class="btn" bindtap="toChangePwd" type="primary" style="position: relative; left: 0rpx; top: 48rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">管理员账号改密</button>
+<button wx:if="{{!isSuper}}" class="btn" bindtap="toWithDrawCode" type="primary" style="position: relative; left: 0rpx; top: 60rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">管理员账号注销</button>

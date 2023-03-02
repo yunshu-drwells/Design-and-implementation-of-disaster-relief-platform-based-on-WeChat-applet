@@ -1,0 +1,34 @@
+ <!--pages/superManageAdmin/superManageAdmin.wxml-->
+<!-- <text>pages/superManageAdmin/superManageAdmin.wxml</text> -->
+<button class="btn" bindtap="addAdmin" type="primary" style="position: relative; left: 0rpx; top: 36rpx; width: 750rpx; height: 94rpx; display: block; box-sizing: border-box;color: black;">增加普通管理员信息</button>
+<view class="head" style="position: relative; height: 125rpx; margin-top: 45rpx; left: 0rpx; top: -5rpx; width: 750rpx; display: block; box-sizing: border-box">
+<text style="position: relative; left: 17rpx; top: 3rpx">预览普通管理员信息:</text>
+<text style="position: relative; margin-left: -345rpx; width: 750rpx; height: 100rpx; left: 1rpx; top: 56rpx; font-size: xx-small">点击可以进入信息详情页执行修改和删除管理员</text>
+</view>
+
+<view style="top:300px;">
+<text>普通管理员信息：{{adminInfoNum}}条</text>
+  <scroll-view scroll-y="true" wx:for="{{adminInfoList}}" wx:key="item" bindscrolltolower="searchScrollLower">
+    <view class="result-item" bindtap="showAdminInfo" data-item_index="{{index}}" style="width: 750rpx; height: 406rpx; display: block; box-sizing: border-box">
+
+      <view>编号:</view>
+      <view >{{item._id}}</view>
+      <view >账号：{{item.Code}}</view>
+      <view >密码：{{item.Pwd}}</view>
+      <view >证件号：{{item.ID}}</view>
+      <view wx:if="{{item.gender==2}}">性别：女性</view>
+      <view wx:if="{{item.gender==1}}">性别：男性</view>
+      <view wx:if="{{item.gender==0}}">性别：未知</view>
+      <view >电话：{{item.phone}}</view>
+      <!-- <text style="position: relative; width: 750rpx; margin-left: -345rpx; left: 361rpx; top: 12rpx">编号:</text>
+      <text style="position: relative; width: 750rpx; margin-left: -345rpx; left: 622rpx; top: 70rpx">{{item._id}}</text>
+      <text style="position: relative; margin-left: -345rpx; left: 284rpx; top: 132rpx">账号：{{item.Code}}</text>
+      <text style="position: relative; margin-left: -345rpx; left: -120rpx; top: 188rpx">密码：{{item.Pwd}}</text>
+      <text style="position: relative; margin-left: -345rpx; left: 357rpx; top: 197rpx">证件号：{{item.ID}}</text>
+      <text style="position: relative; margin-left: -35rpx; left: -155rpx; top: 256rpx" wx:if="{{item.gender==2}}">性别：女性</text>
+      <text style="position: relative; margin-left: -35rpx; left: -157rpx; top: 286rpx" wx:if="{{item.gender==1}}">性别：男性</text>
+      <text style="position: relative; margin-left: -35rpx; left: -157rpx; top: 286rpx" wx:if="{{item.gender==0}}">性别：未知</text>
+      <view style="position: relative; margin-left: -345rpx; left: 361rpx; top: 272rpx">电话：{{item.phone}}</view> -->
+    </view>
+  </scroll-view> 
+</view>
